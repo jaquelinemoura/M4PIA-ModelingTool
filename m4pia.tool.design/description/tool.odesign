@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="M4PIA" modelFileExtension="M4PIAmetamodel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Project Diagram" domainClass="M4PIAmetamodel::Project" enablePopupBars="true">
+      <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="ImportedFile" semanticCandidatesExpression="feature:file" domainClass="M4PIAmetamodel::ImportedFile">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="40" showIcon="false" labelExpression="aql:self.path+self.name" tooltipExpression="feature:name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/m4pia.tool.design/icons/ImportedFile.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GeneratedFile" semanticCandidatesExpression="feature:file" domainClass="M4PIAmetamodel::GeneratedFile">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="40" showIcon="false" tooltipExpression="feature:name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/m4pia.tool.design/icons/GeneratedFile.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GeneratedFile Diagram" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
+      <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
+      <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Equipment" semanticCandidatesExpression="feature:entity" domainClass="M4PIAmetamodel::Equipment">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" resizeKind="NSEW" shape="triangle">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="EquipmentInheritance" semanticCandidatesExpression="aql:self.entity.siblings().equipment.base" sourceMapping="//@ownedViewpoints[name='M4PIA']/@ownedRepresentations[name='GeneratedFile%20Diagram']/@defaultLayer/@nodeMappings[name='Equipment'] //@ownedViewpoints[name='M4PIA']/@ownedRepresentations[name='Project%20Diagram']/@defaultLayer/@nodeMappings[name='GeneratedFile']" targetMapping="//@ownedViewpoints[name='M4PIA']/@ownedRepresentations[name='GeneratedFile%20Diagram']/@defaultLayer/@nodeMappings[name='Equipment']" targetFinderExpression="feature:base" sourceFinderExpression="feature:base" domainClass="M4PIAmetamodel::Equipment" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Relationship" semanticCandidatesExpression="aql:self.eAllContents()" sourceMapping="//@ownedViewpoints[name='M4PIA']/@ownedRepresentations[name='GeneratedFile%20Diagram']/@defaultLayer/@nodeMappings[name='Equipment']" targetMapping="//@ownedViewpoints[name='M4PIA']/@ownedRepresentations[name='GeneratedFile%20Diagram']/@defaultLayer/@nodeMappings[name='Equipment']" targetFinderExpression="feature:base" sourceFinderExpression="feature:base" domainClass="M4PIAmetamodel::Equipment" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="m4pia.tool.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
