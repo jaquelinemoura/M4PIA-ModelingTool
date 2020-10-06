@@ -4,14 +4,14 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Flow Diagram Description" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
       <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
       <layout xsi:type="description_1:CompositeLayout"/>
-      <defaultLayer name="Default">
-        <nodeMappings name="Node Equipment" semanticCandidatesExpression="feature:entity" domainClass="Equipment">
+      <defaultLayer name="Flow Default">
+        <nodeMappings name="FD Node Equipment" semanticCandidatesExpression="feature:entity" domainClass="Equipment">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="5" resizeKind="NSEW" workspacePath="/m4pia.design/icons/Equipment.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Edge base Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='Node%20Equipment']" targetFinderExpression="feature:base">
+        <edgeMappings name="Edge base Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='FD%20Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='FD%20Node%20Equipment']" targetFinderExpression="feature:base">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="base">
@@ -19,7 +19,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Edge attr Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='Node%20Equipment']" targetFinderExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType).base">
+        <edgeMappings name="Edge attr Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='FD%20Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='FD%20Node%20Equipment']" targetFinderExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType).base">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="attr">
@@ -29,9 +29,52 @@
         </edgeMappings>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='Node%20Equipment']/@style" attributeName="workspacePath" value="service:getEquipmentImage()"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Flow%20Diagram%20Description']/@defaultLayer/@nodeMappings[name='FD%20Node%20Equipment']/@style" attributeName="workspacePath" value="service:getEquipmentImage()"/>
           </vsmElementCustomizations>
         </customization>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Equipments Description" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
+      <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
+      <defaultLayer name="Equipments Default">
+        <edgeMappings name="Edge attr Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipments%20Description']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipments%20Description']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetFinderExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType).base">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="attr">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Edge base Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipments%20Description']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipments%20Description']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetFinderExpression="feature:base">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2" foldingStyle="SOURCE" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="base">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ED Container Equipment" semanticCandidatesExpression="feature:entity" domainClass="M4PIAmetamodel::Equipment" childrenPresentation="List">
+          <subNodeMappings name="BasicType Attribute" semanticCandidatesExpression="feature:attr" domainClass="M4PIAmetamodel::Attribute">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="service:getAttributeLabel()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Method" semanticCandidatesExpression="feature:method" domainClass="M4PIAmetamodel::Method">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:'Method: '+self.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="m4pia.design.Services"/>
