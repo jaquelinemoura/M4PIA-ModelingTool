@@ -3,8 +3,8 @@
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
     <component class="m4pia.design.Activator"
-               id="m4pia.project.design"
-	       name="project">
+               id="m4pia.design"
+	       name="m4pia">
     </component>
   </extension>
 </plugin>
