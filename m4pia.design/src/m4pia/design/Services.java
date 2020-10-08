@@ -53,7 +53,6 @@ public class Services {
 
 		if (fileExtension.compareToIgnoreCase("png") == 0 || fileExtension.compareToIgnoreCase("svg") == 0
 				|| fileExtension.compareToIgnoreCase("jpg") == 0) {
-			System.err.println("Format ok: " + fileExtension + " " + equipmentIcon);
 			return equipmentIcon;
 		}
 
@@ -76,7 +75,7 @@ public class Services {
 		String type = attribute.getClass().getSimpleName();
 		type = type.replace("Impl", "");
 		String label = attribute.getName() + ": " + type + " ";
-
+		
 		// BasicType -> Typed-> Attribute -> Variable
 		if (attribute instanceof BasicType) {
 			if (attribute instanceof Real) {
