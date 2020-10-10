@@ -119,5 +119,9 @@ public class Services {
 
 		return label;
 	}
+	
+	public String getDetails(Attribute attribute) {		
+	return "020" + "EF" + 2;
+	}
 
 }
