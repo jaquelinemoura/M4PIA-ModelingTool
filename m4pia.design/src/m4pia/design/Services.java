@@ -3,15 +3,11 @@ package m4pia.design;
 import org.eclipse.emf.ecore.EObject;
 
 import org.apache.commons.io.FilenameUtils;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-
 import M4PIAmetamodel.Equipment;
 import M4PIAmetamodel.EquipmentType;
 import M4PIAmetamodel.Real;
 import M4PIAmetamodel.Integer;
 import M4PIAmetamodel.Boolean;
-import M4PIAmetamodel.StringOption;
 import M4PIAmetamodel.Attribute;
 import M4PIAmetamodel.BasicType;
 
@@ -59,6 +55,10 @@ public class Services {
 		return defaultIcon;
 	}
 
+	
+	public String getEquipmentImage(EquipmentType equipmentType) {
+		return getEquipmentImage(equipmentType.getBase());
+	}
 	/*********************** ATTRIBUTE *******************************/
 
 	/**
@@ -69,12 +69,8 @@ public class Services {
 	 * @param attribute
 	 * @return
 	 */
-	public String getAttributeLabel(Attribute attribute) {
-		
-		
-		String type = attribute.getClass().getSimpleName();
-		type = type.replace("Impl", "");
-		String label = attribute.getName() + ": " + type + " ";
+	public String getAttributeDetails(Attribute attribute) {		
+		String label = " ";
 		
 		// BasicType -> Typed-> Attribute -> Variable
 		if (attribute instanceof BasicType) {
@@ -120,8 +116,5 @@ public class Services {
 		return label;
 	}
 	
-	public String getDetails(Attribute attribute) {		
-	return "020" + "EF" + 2;
-	}
 
 }
