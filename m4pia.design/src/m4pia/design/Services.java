@@ -35,7 +35,7 @@ public class Services {
 	 * @return String equipment's icon (valid) else default icon path  
 	 */
 	public String getEquipmentImage(Equipment equipment) {
-		String defaultIcon = "/m4pia.design/icons/Equipment.svg";
+		String defaultIcon = "/m4pia.design/images/shapes/Box-Blue.svg";
 		
 		String equipmentIcon = equipment.getIcon();
 		if (equipmentIcon == null || equipmentIcon.isEmpty()) {
