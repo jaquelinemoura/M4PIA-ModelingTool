@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="m4pia" version="12.0.0.2017041100">
-  <ownedViewpoints name="DesignViewpoint" modelFileExtension="m4piametamodel">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="File Composition Diagram" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
+  <ownedViewpoints name="DesignViewpoint" modelFileExtension="m4piametamodel m4piamodel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="File Icons Diagram" titleExpression="aql:self.name + ': Icons Diagram'" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
       <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide generalizations (edges)">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToBase']"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToBase']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide compositions (edges)">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide equipment content">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']/@subContainerMappings[name='ContainerMethods'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']/@subContainerMappings[name='ContainerBasicAttributes'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']/@subContainerMappings[name='ContainerEquipmentAttributes']"/>
@@ -19,8 +19,8 @@
       </validationSet>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
-        <nodeMappings name="CD Node Equipment" semanticCandidatesExpression="feature:entity" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="M4PIAmetamodel::Equipment">
-          <borderedNodeMappings name="BorderedComposition" semanticCandidatesExpression="aql: if( self.attr->filter(M4PIAmetamodel::EquipmentType)->size()>0) then self else null endif" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="M4PIAmetamodel::Equipment">
+        <nodeMappings name="CD Node Equipment" semanticCandidatesExpression="feature:entity" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="M4PIAmetamodel::Equipment">
+          <borderedNodeMappings name="BorderedComposition" semanticCandidatesExpression="aql: if( self.attr->filter(M4PIAmetamodel::EquipmentType)->size()>0) then self else null endif" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" domainClass="M4PIAmetamodel::Equipment">
             <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" tooltipExpression="aql:self.name +' is composed by other Equipments'" sizeComputationExpression="1" workspacePath="/m4pia.design/images/icons/original-size/027-enigma-8.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -31,19 +31,16 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="CD EquipmentToEquipmentType" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetFinderExpression="[base/]" sourceFinderExpression="[ancestors()/]" domainClass="M4PIAmetamodel::EquipmentType" useDomainElement="true">
-          <style sourceArrow="FillDiamond" routingStyle="manhattan" foldingStyle="SOURCE">
+        <edgeMappings name="CD EquipmentToEquipmentType" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetFinderExpression="[base/]" sourceFinderExpression="[ancestors()/]" domainClass="M4PIAmetamodel::EquipmentType" useDomainElement="true">
+          <style targetArrow="NoDecoration" routingStyle="manhattan" foldingStyle="SOURCE">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="9" showIcon="false">
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="aql:if(self.list) then 'N ' else '' endif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             </centerLabelStyleDescription>
-            <endLabelStyleDescription labelSize="9" showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="CD EquipmentToBase" deletionDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Heritage']" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetFinderExpression="feature:base">
-          <style targetArrow="InputClosedArrow" routingStyle="tree" foldingStyle="SOURCE" endsCentering="Source" centeredSourceMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']">
+        <edgeMappings name="CD EquipmentToBase" deletionDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Heritage']" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']" targetFinderExpression="feature:base">
+          <style targetArrow="InputClosedArrow" routingStyle="tree" foldingStyle="SOURCE" endsCentering="Source" centeredSourceMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="9" showIcon="false">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
@@ -51,7 +48,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Creation Tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" documentation="Create a new equipment" name="Equipment" nodeMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" documentation="Create a new equipment" name="Equipment" nodeMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -63,12 +60,12 @@
                   <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                     <initialOperation/>
                   </buttons>
-                  <page name="Create Page"/>
+                  <page name="Create Page" extends="//@extensions.0/@categories.0/@pages.0"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Composition" precondition="aql:preSourceView &lt;> preTargetView" edgeMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']" iconPath="/m4pia.design/images/icons/obj16/Composition.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Composition" precondition="aql:preSourceView &lt;> preTargetView" edgeMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']" iconPath="/m4pia.design/images/icons/obj16/Composition.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -82,7 +79,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" precondition="aql:preSourceView &lt;> preTargetView" edgeMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToBase']" iconPath="/m4pia.design/images/icons/obj16/Generalization.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" precondition="aql:preSourceView &lt;> preTargetView" edgeMappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToBase']" iconPath="/m4pia.design/images/icons/obj16/Generalization.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -113,7 +110,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToBase'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']/@borderedNodeMappings[name='BorderedComposition']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToBase'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']/@borderedNodeMappings[name='BorderedComposition']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -133,35 +130,35 @@
         </toolSections>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self->filter(M4PIAmetamodel::Equipment)">
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']/@style" attributeName="workspacePath" value="service:getEquipmentImage()"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']/@style" attributeName="workspacePath" value="service:getEquipmentImage()"/>
           </vsmElementCustomizations>
         </customization>
       </defaultLayer>
-      <additionalLayers name="Decorator" activeByDefault="true">
+      <additionalLayers name="Decorator">
         <decorationDescriptionsSet>
-          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ListDecorator" position="NORTH" distributionDirection="HORIZONTAL" preconditionExpression="aql:self.list=true" imageExpression="/m4pia.design/images/icons/obj16/List.png" tooltipExpression="aql:self.name +' is a list'" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ListDecorator" position="NORTH" distributionDirection="HORIZONTAL" preconditionExpression="aql:self.list=true" imageExpression="/m4pia.design/images/icons/obj16/List.png" tooltipExpression="aql:self.name +' is a list'" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']"/>
         </decorationDescriptionsSet>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self->filter(M4PIAmetamodel::Equipment)">
-            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']/@borderedNodeMappings[name='BorderedComposition']/@style"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@nodeMappings[name='CD%20Node%20Equipment']/@borderedNodeMappings[name='BorderedComposition']/@style"/>
           </vsmElementCustomizations>
         </customization>
       </additionalLayers>
       <additionalLayers documentation="Show the edges name" endUserDocumentation="Show the edges name" name="Composition edges name">
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self->filter(M4PIAmetamodel::EquipmentType)">
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Composition%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']/@style/@centerLabelStyleDescription" attributeName="labelExpression" value="aql:'     '+self.name"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Icons%20Diagram']/@defaultLayer/@edgeMappings[name='CD%20EquipmentToEquipmentType']/@style/@centerLabelStyleDescription" attributeName="labelExpression" value="aql:if (self.list) then ' N ' else ' 1 ' endif + self.name"/>
           </vsmElementCustomizations>
         </customization>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="File Description Diagram" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="File Description Diagram" titleExpression="aql:self.name + ': Description Diagram'" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
       <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide generalizations (edges)">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@edgeMappings[name='ED%20EquipmentToBase']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide composition (edges)">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@edgeMappings[name='ED%20EquipmentToEquipmentType']"/>
+        <filters xsi:type="filter:MappingFilter"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide equipment content">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']/@subContainerMappings[name='ContainerMethods'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']/@subContainerMappings[name='ContainerBasicAttributes'] //@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']/@subContainerMappings[name='ContainerEquipmentAttributes']"/>
@@ -177,14 +174,6 @@
       </filters>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
-        <edgeMappings name="ED EquipmentToEquipmentType" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetFinderExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType).base">
-          <style sourceArrow="FillDiamond" routingStyle="manhattan" foldingStyle="SOURCE">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="9" showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
         <edgeMappings name="ED EquipmentToBase" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetFinderExpression="aql:self.base">
           <style targetArrow="InputClosedArrow" routingStyle="tree" foldingStyle="SOURCE">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -193,16 +182,24 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="ED EquipmentToEquipmentType" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@containerMappings[name='ED%20Container%20Equipment']" targetFinderExpression="[base/]" sourceFinderExpression="[ancestors()/]" domainClass="M4PIAmetamodel::EquipmentType" useDomainElement="true">
+          <style sourceArrow="FillDiamond" routingStyle="manhattan" foldingStyle="SOURCE">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="aql:if(self.list) then '[0..*] ' else '[1..1] ' endif">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="ED Container Equipment" semanticCandidatesExpression="feature:entity" domainClass="M4PIAmetamodel::Equipment" childrenPresentation="VerticalStack">
           <subContainerMappings name="ContainerBasicAttributes" semanticCandidatesExpression="var:self" domainClass="M4PIAmetamodel::Equipment" childrenPresentation="List">
             <subNodeMappings name="BasicType Attribute" semanticCandidatesExpression="aql:self.attr->filter(M4PIAmetamodel::BasicType)" domainClass="M4PIAmetamodel::Attribute">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.name +': '+if (self.list) then 'List&lt;'  + self.eClass().name  + ' '+ self.base.name+'>' else self.eClass().name endif " labelAlignment="LEFT" resizeKind="NSEW" color="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
+              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.name +': '+if (self.list) then 'List&lt;'  + self.eClass().name  + ' ' + self.base.name + '>' else self.eClass().name  + ' ' + self.base.name endif " labelAlignment="LEFT" resizeKind="NSEW" color="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="1" borderLineStyle="dash" labelSize="12" labelExpression="Basics Attributes" iconPath="/m4pia.design/images/icons/obj16/Rhombus-Blue.gif" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']" foregroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="1" labelSize="12" labelExpression="Basics" iconPath="/m4pia.design/images/icons/obj16/Rhombus-Blue.gif" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']" foregroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
@@ -215,8 +212,8 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelSize="12" labelExpression="Equipment Attributes" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']" foregroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="Equipment" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']" foregroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
@@ -229,8 +226,8 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelSize="12" labelExpression="Methods" iconPath="/m4pia.design/images/icons/obj16/Method.gif" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']" foregroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="Methods" iconPath="/m4pia.design/images/icons/obj16/Method1.gif" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']" foregroundColor="//@userColorsPalettes[name=null]/@entries[name='Light%20Gray']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
@@ -242,6 +239,13 @@
           </style>
         </containerMappings>
       </defaultLayer>
+      <additionalLayers documentation="Show the edges name" endUserDocumentation="Show the edges name" name="Composition edges name">
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self->filter(M4PIAmetamodel::EquipmentType)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Description%20Diagram']/@defaultLayer/@edgeMappings[name='ED%20EquipmentToEquipmentType']/@style/@centerLabelStyleDescription" attributeName="labelExpression" value="aql:if(self.list) then '[0..*] ' else '[1..1] ' endif + 'self.name'"/>
+          </vsmElementCustomizations>
+        </customization>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="File Relationships Diagram" domainClass="M4PIAmetamodel::GeneratedFile" enablePopupBars="true">
       <metamodel href="http://www.das.ufsc.br/M4PIAmetamodel#/"/>
@@ -249,7 +253,7 @@
         <edgeMappings name="ER Edge attr Equipment" sourceMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Relationships%20Diagram']/@defaultLayer/@containerMappings[name='ER%20Container%20Equipment']" targetMapping="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='File%20Relationships%20Diagram']/@defaultLayer/@containerMappings[name='ER%20Container%20Equipment']" targetFinderExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType).base">
           <style sourceArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan" foldingStyle="SOURCE">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:if(self.list=true) then '    [0..*]' else '    [1..1]' endif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -297,7 +301,7 @@
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Equipment's Attributes" titleExpression="AttributesProperties" domainClass="M4PIAmetamodel::Equipment">
       <ownedLineMappings name="AttributeName" domainClass="M4PIAmetamodel::Attribute" semanticCandidatesExpression="feature:attr"/>
       <ownedColumnMappings name="Type" headerLabelExpression="Type" featureName="name" labelExpression="aql:self.eClass().name"/>
-      <ownedColumnMappings name="Is list" headerLabelExpression="Is list" featureName="list" labelExpression="aql:if self.list 'yes' else 'no' endif"/>
+      <ownedColumnMappings name="Is list" headerLabelExpression="Is list" featureName="list" labelExpression="aql:self.list"/>
       <ownedColumnMappings name="AtributeDetails" headerLabelExpression="Atribute Details" featureName="ID" labelExpression="service:getAttributeDetails()"/>
       <ownedColumnMappings name="Access" headerLabelExpression="Access" featureName="access" labelExpression="aql:'Get: '+ self.access.get+'; Set '+ self.access.set + '; Read: '+ self.access.read + '; Write: '+ self.access.write"/>
       <ownedColumnMappings name="Brief" headerLabelExpression="Brief" featureName="brief" labelExpression="aql:self.brief"/>
@@ -313,19 +317,28 @@
       </filters>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
-        <containerMappings name="ECD Container Equipment" semanticCandidatesExpression="aql:self" domainClass="M4PIAmetamodel::Equipment">
-          <subNodeMappings name="ECD Node EquipmentType" semanticCandidatesExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType)" domainClass="M4PIAmetamodel::EquipmentType">
-            <borderedNodeMappings name="BorderedComposition" semanticCandidatesExpression="aql: if( self.base.attr->filter(M4PIAmetamodel::EquipmentType)->size()>0) then self else null endif" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Equipment%20Diagram']" domainClass="M4PIAmetamodel::EquipmentType">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" tooltipExpression="aql:self.name +' is composed by other Equipments'" sizeComputationExpression="2" workspacePath="/m4pia.design/images/icons/original-size/027-enigma-8.png">
+        <containerMappings name="ECD Container Equipment" semanticCandidatesExpression="aql:self" domainClass="M4PIAmetamodel::Equipment" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Container EquipmentType" semanticCandidatesExpression="aql:self.attr->filter(M4PIAmetamodel::EquipmentType)" domainClass="M4PIAmetamodel::EquipmentType">
+            <subNodeMappings name="ECD Node EquipmentType" semanticCandidatesExpression="var:self" domainClass="M4PIAmetamodel::EquipmentType">
+              <borderedNodeMappings name="BorderedComposition" semanticCandidatesExpression="aql: if( self.list) then self else null endif" doubleClickDescription="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Equipment%20Diagram']" domainClass="M4PIAmetamodel::EquipmentType">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" tooltipExpression="aql:self.name +' is composed by other Equipments'" sizeComputationExpression="2" workspacePath="/m4pia.design/images/icons/obj16/List.png">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </borderedNodeMappings>
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" iconPath="/m4pia.design/images/shapes/Rectangle-Rounded4-White.svg" labelAlignment="RIGHT" tooltipExpression="aql: 'Equipment '+self.name" sizeComputationExpression="5" resizeKind="NSEW" workspacePath="/m4pia.design/images/shapes/Rectangle-Rounded4-White.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
-            </borderedNodeMappings>
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" iconPath="/m4pia.design/images/shapes/Rectangle-Rounded4-White.svg" labelAlignment="RIGHT" tooltipExpression="aql: 'Equipment '+self.name" sizeComputationExpression="5" resizeKind="NSEW" workspacePath="/m4pia.design/images/shapes/Rectangle-Rounded4-White.svg">
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" showIcon="false" labelExpression="" hideLabelByDefault="true">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
-          </subNodeMappings>
+          </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -412,7 +425,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Equipment Diagram" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@containerMappings[name='ECD%20Container%20Equipment']/@subNodeMappings[name='ECD%20Node%20EquipmentType']/@borderedNodeMappings[name='BorderedComposition']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Equipment Diagram" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@containerMappings[name='ECD%20Container%20Equipment']/@subContainerMappings[name='Container%20EquipmentType']/@subNodeMappings[name='ECD%20Node%20EquipmentType']/@borderedNodeMappings[name='BorderedComposition']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -424,7 +437,7 @@
         </toolSections>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self->filter(M4PIAmetamodel::EquipmentType)">
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@containerMappings[name='ECD%20Container%20Equipment']/@subNodeMappings[name='ECD%20Node%20EquipmentType']/@style" attributeName="workspacePath" value="service:getEquipmentImage()"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@containerMappings[name='ECD%20Container%20Equipment']/@subContainerMappings[name='Container%20EquipmentType']/@subNodeMappings[name='ECD%20Node%20EquipmentType']/@style" attributeName="workspacePath" value="service:getEquipmentImage()"/>
           </vsmElementCustomizations>
         </customization>
       </defaultLayer>
@@ -437,7 +450,7 @@
       </additionalLayers>
       <additionalLayers name="Decorator" activeByDefault="true">
         <decorationDescriptionsSet>
-          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ListDecorator" position="NORTH" distributionDirection="HORIZONTAL" preconditionExpression="aql:self.list=true" imageExpression="/m4pia.design/images/icons/obj16/List.png" tooltipExpression="aql:self.name +' is a list'"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ListDecorator" preconditionExpression="aql:self.list=true" imageExpression="/m4pia.design/images/icons/obj16/List.png" tooltipExpression="aql:self.name +' is a list'" mappings="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@containerMappings[name='ECD%20Container%20Equipment']/@subContainerMappings[name='Container%20EquipmentType']/@subNodeMappings[name='ECD%20Node%20EquipmentType']"/>
         </decorationDescriptionsSet>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self->filter(M4PIAmetamodel::Equipment)">
@@ -461,9 +474,11 @@
   </userColorsPalettes>
   <extensions xsi:type="properties:ViewExtensionDescription">
     <categories>
-      <pages>
-        <extends href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@pages.0"/>
-      </pages>
+      <pages groups="//@extensions.0/@categories.0/@groups.0" extends="//@ownedViewpoints[name='DesignViewpoint']/@ownedRepresentations[name='Equipment%27s%20Composition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']/@initialOperation/@firstModelOperations/@page"/>
+      <groups name="Identification" labelExpression="Identification" domainClass="M4PIAmetamodel::Equipment" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ContainerDescription"/>
+        <extends href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@groups.0"/>
+      </groups>
     </categories>
   </extensions>
 </description:Group>
